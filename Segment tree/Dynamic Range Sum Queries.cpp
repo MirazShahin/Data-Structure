@@ -13,9 +13,7 @@ void build(int node, int l, int r) {
     }
     int mid = (l + r) / 2;
     build(2 * node, l, mid);
-    build(2 * node + 1, mid + 1, r);
-
-    // Store the minimum value
+    build(2 * node + 1, mid + 1, r); 
     tree[node] = tree[2 * node] + tree[2 * node + 1];
 }
 
